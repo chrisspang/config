@@ -149,7 +149,7 @@ f() {
     if [ $# -eq 1 ]
     then
         1>&2 echo 'find . -name .svn -prune -or -print | grep "$@"' 
-        find . -name .svn -prune -or -print | grep "$@"
+        find . -name .git -prune -or -print | grep "$@"
         return
     fi
     
@@ -163,9 +163,9 @@ f() {
     if [ $# -gt 0 ]
     then
         1>&2 echo find $PATHS -name .svn -prune -or "$@"
-        find $PATHS -name .svn -prune -or "$@" 
+        find $PATHS -name .git -prune -or "$@" 
     else
-        find $PATHS -name .svn -prune -or -print
+        find $PATHS -name .git -prune -or -print
     fi
 }
 
