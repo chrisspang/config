@@ -1,0 +1,88 @@
+!rxvt*loginShell:true
+!rxvt*transparent:false
+!rxvt*shading:40
+!rxvt*background:Black
+!rxvt*foreground:azure
+!rxvt*scrollBar:true
+!rxvt*scrollBar_right:true
+!rxvt*transpscrollbar:true
+!rxvt*saveLines:32767
+!rxvt*font:*-*-fixed-medium-r-normal--*-110-*-*-*-*-iso8859-1
+!rxvt*boldFont:*-*-fixed-bold-r-normal--*-*-110-*-*-*-*-iso8859-1
+
+URxvt*loginShell:true
+!URxvt*transparent:false
+!URxvt*shading:40
+URxvt*background:Black
+URxvt*foreground:azure
+URxvt*scrollBar:true
+URxvt*scrollBar_right:true
+URxvt*scrollBar_floating:true
+!URxvt*transpscrollbar:false
+URxvt*saveLines:32767
+
+URxvt*perl-ext-common: default,selection-autotransform
+URxvt*termName: rxvt
+
+!URxvt*font:*-*-fixed-medium-r-normal--*-110-*-*-*-*-iso8859-1
+!URxvt*boldFont:*-*-fixed-bold-r-normal--*-*-110-*-*-*-*-iso8859-1
+!URxvt*font: neep-alt-12
+!URxvt*boldFont: neep-alt-bold-12
+!URxvt*font: *-proggyclean-*
+!urxvtsmall*font: *-proggytiny-*
+!urxvtsmall*boldFont: *-proggytinysz-bold-*
+
+URxvt*font: xft:ProggyCleanTT:pixelsize=15
+urxvtsmall*font: xft:ProggyTinyTT:pixelsize=12
+
+Emacs.default.attributeBackground: black
+Emacs.default.attributeForeground: azure
+
+Emacs.text-cursor*attributeBackground:  Red3
+Emacs.pointer*attributeForeground:      Red3
+Emacs.pointer*attributeBackground:      Red3
+Emacs*menubar*Foreground:               MidnightBlue
+Emacs*menubar*Background:               Bisque1
+Emacs*popup*Foreground:                 MidnightBlue
+Emacs*popup*Background:                 Bisque1
+
+Emacs.default.attributeFont:  fixed
+!Emacs.default.attributeFont:  -adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-*
+
+!Emacs.bold-italic.attributeFont: *-*-fixed-bold-r-normal--*-*-110-*-*-*-*-iso8859-1 
+!     Emacs.italic.attributeFont: *-*-fixed-bold-r-normal--*-*-110-*-*-*-*-iso8859-1 
+!       Emacs.bold.attributeFont: *-*-fixed-bold-r-normal--*-*-110-*-*-*-*-iso8859-1 
+
+Emacs*menubar*font:           fixed
+      Emacs*menubar*fontList: fixed
+Emacs.modeline.attributeFont: fixed
+
+! For selection colouring
+Emacs.zmacs-region.attributeForeground: firebrick
+Emacs.zmacs-region.attributeBackground: lightseagreen
+
+! For emacs
+emacs.dialog*.background:                   black
+emacs*pane.background:                      LightBlue1
+emacs*menu*background:                      LightBlue1
+emacs*menubar*background:                   LightBlue1
+emacs*verticalScrollBar.background:         LightBlue1
+emacs*verticalScrollBar.throughColor:       LightBlue3
+emacs*background:                           black
+emacs*foreground:                           azure
+emacs*pointerColor:                         Black
+emacs*cursorColor:                          Red
+emacs*bitmapIcon:                           off
+emacs.default.attributeBackground: black
+emacs.default.attributeForeground: azure
+emacs.text-cursor*attributeBackground:  Red3
+emacs.pointer*attributeForeground:      Red3
+emacs.pointer*attributeBackground:      Red3
+emacs*menubar*Foreground:               MidnightBlue
+emacs*menubar*Background:               Bisque1
+emacs*popup*Foreground:                 MidnightBlue
+emacs*popup*Background:                 Bisque1
+
+! For selection colouring
+emacs.zmacs-region.attributeForeground: firebrick
+emacs.zmacs-region.attributeBackground: lightseagreen
