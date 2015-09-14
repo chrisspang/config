@@ -19,7 +19,6 @@
  '(develock-max-column-plist (quote (emacs-lisp-mode 79 lisp-interaction-mode w change-log-mode t texinfo-mode t c-mode 79 c++-mode 79 java-mode 79 caml-mode 79 tuareg-mode 79 coq-mode 79 latex-mode 79 jde-mode 79 html-mode 79 html-helper-mode 79 cperl-mode 89 perl-mode 79 mail-mode t message-mode t cmail-mail-mode t tcl-mode 79 ruby-mode 79)))
  '(display-time-mode t)
  '(fringe-mode (quote (1 . 1)) nil (fringe))
- '(global-undo-tree-mode t)
  '(scroll-bar-mode (quote right))
  '(size-indication-mode t)
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
@@ -129,10 +128,6 @@ Stolen from http://www.dotemacs.de/dotfiles/BenjaminRutt.emacs.html."
 
 (defvar *perl-libraries* '() "Cache of all known perl libraries on the system")
 
-(require 'perl-find-library)
-
-(global-set-key "\C-xf" 'perl-find-library)
-
 ;; Move between split buffers with Shift-<arrow keys>
 ;; (windmove-default-keybindings)
 
@@ -153,17 +148,12 @@ Stolen from http://www.dotemacs.de/dotfiles/BenjaminRutt.emacs.html."
 ;; (require 'git)
 ;; (require 'git-blame)
 
-
-;;
-;; coffee-script mode (coffee-mode)
-;;
+(require 'whitespace)
+(global-whitespace-mode)
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))
 ;; only show bad whitespace
-(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
-
-;; This gives you a tab of 2 spaces
-
+(setq whitespace-style '(face trailing space-before-tab indentation empty space-after-tab))
 
 ;; http://web-mode.org/
 (require 'web-mode)
@@ -229,7 +219,7 @@ point reaches the beginning or end of the buffer, stop there."
                 'prelude-move-beginning-of-line)
 
 (require 'undo-tree)
-(global-undo-tree-mode t)
+;; (global-undo-tree-mode t)
 
 ;; Automatically reload log files into buffer
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-mode))
@@ -237,7 +227,7 @@ point reaches the beginning or end of the buffer, stop there."
 (setq scroll-margin 5
       scroll-preserve-screen-position 1)
 
-(scroll-bar-mode 0) ;; Disables the scroll bar
+(scroll-bar-mode 1) ;; Disables the scroll bar
 ;; (fset 'yes-or-no-p ‘y-or-n-p) ;; Answer with y and n instead of yes and no
 ;; (setq confirm-kill-emacs ‘yes-or-no-p) ;; Ask for confirmation before closing emacs
 (show-paren-mode 1) ;; Highlight matching parens
@@ -256,7 +246,7 @@ point reaches the beginning or end of the buffer, stop there."
 ;; M-n M-p
 (global-smartscan-mode 1)
 
-(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-dark t)
 
 (require 'saveplace)
 (setq-default save-place t)
@@ -271,11 +261,11 @@ point reaches the beginning or end of the buffer, stop there."
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;; Auto insert of 'end'
-(require 'ruby-end)
+;;(require 'ruby-end)
 ;; Auto interpolation #{}
-(require 'ruby-interpolation)
+;;(require 'ruby-interpolation)
 ;; Ruby tools ...
-(require 'ruby-tools)
+;;e(require 'ruby-tools)
 
 (eval-after-load "ruby-mode"
   '(add-hook 'ruby-mode-hook 'ruby-electric-mode))
