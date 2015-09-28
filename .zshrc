@@ -171,8 +171,9 @@ my-rvm-prompt() {
     GPI=$(git_prompt_info)
     if [ "$GPI" != "" ]
     then
-        RPROMPT=$(rvm-prompt | sed -e 's/^ruby-//')
-        echo '('$RPROMPT/$GPI
+        #RPROMPT=$(rvm-prompt | sed -e 's/^ruby-//')
+        #echo '('$RPROMPT/$GPI
+        echo '('$GPI
     fi
 }
 
