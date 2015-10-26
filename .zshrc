@@ -87,7 +87,7 @@ setopt autocd notify
 unsetopt beep
 setopt list_packed
 setopt sh_word_split
-
+unsetop share_history
 
 em() {
     emacs $* &
