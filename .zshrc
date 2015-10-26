@@ -87,7 +87,7 @@ setopt autocd notify
 unsetopt beep
 setopt list_packed
 setopt sh_word_split
-unsetop share_history
+setopt ignore_eof
 
 em() {
     emacs $* &
@@ -119,7 +119,7 @@ cd() {
 }
 
 # My find | xargs grep to avoid .svn directories
-alias fn="egrep --binary-files=without-match -r"
+alias fn="egrep --binary-files=without-match -ir"
 
 # Find but ignore .git
 f() {
@@ -178,6 +178,8 @@ my-rvm-prompt() {
 }
 
 source $ZSH/oh-my-zsh.sh
+# Grrr
+unsetopt share_history
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -205,3 +207,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.zshrc_private
+
+alias dbr='rake db:drop db:create db:migrate'
+alias dbs='rake db:seed'
