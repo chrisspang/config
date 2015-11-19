@@ -1,15 +1,15 @@
 [user]
-	name = Chris Hughes
+        name = Chris Hughes
 #	email = ...
 [core]
         pager  = less -R
-	editor = emacs -nw
+        editor = emacs -nw
 [push]
-	default = current
+        default = current
 [color]
         ui = auto
 [alias]
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative  
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     lge = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%ae)>%Creset' --abbrev-commit --date=relative
     alias = config --get-regex 'alias[.].*'
     st = status
@@ -17,6 +17,7 @@
     lgw = log --pretty=format:'[%Cred%h%Creset - %Cblue%s%Creset](%Creset%C(yellow)http://www/git/%h%Creset) %Cgreen(%an / %cr)%Creset'
     d = diff --ignore-space-change
     ds = diff --staged --ignore-space-change
-        
+    sync = "!f() { git pull upstream master; git push; git fetch; }; f"
+
 [diff]
         noprefix = true
