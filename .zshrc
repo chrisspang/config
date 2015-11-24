@@ -210,3 +210,4 @@ source ~/.zshrc_private
 
 alias dbr='rake db:drop db:create db:migrate'
 alias dbs='rake db:seed'
+alias rs='rspec -f documentation'
